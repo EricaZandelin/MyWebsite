@@ -1,0 +1,83 @@
+
+
+
+  .head__container {
+    /* Gör om detta till flex*/
+      position: absolute;
+      top:50%;
+      left:50%;
+      transform: translate(-50%, -50%);
+      overflow: hidden;
+      text-align: center;
+      color:white;
+      text-transform: uppercase;
+      max-width: 100%;
+  }
+
+  .fa-angellist, .fa-venus, .fa-file-alt, .fa-folder, .fa-itunes-note, .fa-hand-point-left {
+    color:#927619;
+    margin-left: 5px;
+}
+
+
+/*
+  .header__text:hover {
+      color:black;
+      transition: all 0.3s ease 0s;
+      cursor: pointer;
+  }
+  
+  .navbar__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10%;
+   
+
+  }
+  
+  .nav__li {
+    list-style: none;
+    display: inline-block;
+  }
+      
+  .nav__link  {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    transition: all 0.3s ease 0s;
+    padding: 0px 20px;
+  }
+  
+  .nav__link:hover {
+    color:#8d7115;
+  }
+  
+
+.container {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.container:hover {
+  opacity: 0.6;
+}  
+
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+  transform: rotate(45deg) translate(-8px, -8px) ;
+}
+@media screen and (min-width: 0px) and (max-width: 769px) {
+  #my-content { display: none; }   
+}
+
+@media screen and (min-width: 769px) and (max-width: 2000px) {
+  #menu { display: none; }   
+}
+
+@media screen and (min-width: 0px) and (max-width: 769px) {
+  .navbar { display: none; }   
+}
+*/
+ 

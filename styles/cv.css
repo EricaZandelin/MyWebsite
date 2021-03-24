@@ -1,0 +1,49 @@
+@charset "UTF-8";
+/* HITTA EGEN BILD SOM ÄR GRATIS*/
+/*.work {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    color:white;
+}*/
+/*.cv__box, .cv__ed, .cv__ex {
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+}*/
+.experience, .education, .work {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  color: white;
+}
+
+.cv__box {
+  max-width: 200px;
+  width: 100%;
+  height: 300px;
+  background-color: darkslategray;
+}
+
+/*EDUCATION STARTS*/
+.cv__ed {
+  max-width: 200px;
+  height: 250px;
+  width: 100%;
+  background-color: burlywood;
+}
+
+/* EX START*/
+.cv__ex {
+  max-width: 200px;
+  height: 250px;
+  width: 100%;
+  background-color: mediumaquamarine;
+}
+/*# sourceMappingURL=cv.css.map */

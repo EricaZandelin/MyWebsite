@@ -1,0 +1,193 @@
+h1 {
+  color:#000;
+}
+.all__contact-page {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-around;
+    min-height: 800px;
+}
+
+.text-pic__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text__email {
+    background-color: #1c3641;
+    opacity: 0.7;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    height: 70px;
+    align-items: center;
+    max-width: 350px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+ul.fireflies{list-style:none}
+.fire{
+	background-size: cover;
+	background-image: url(../images/elippse2.png);
+	width:21px; 
+	top:-20px;
+	height:21px;
+	position:absolute;
+	animation: 
+		leftright 24s infinite cubic-bezier(.39,.0,.63,1),
+		updown 8s infinite 1.25s cubic-bezier(.39,.0,.63,1)
+}
+.fire:nth-of-type(2){
+animation-delay:4s;
+animation-duration:17s, 8s;
+	animation-fill-mode:backwards, backwards 
+}
+.fire:nth-of-type(3){
+animation-delay:1.5s;
+animation-duration:14s, 7s;
+animation-fill-mode:backwards, backwards
+}
+.fire:nth-of-type(4){
+animation-delay:5.5s;
+animation-duration:10s, 13s;
+}
+.fire:nth-of-type(5){
+animation-fill-mode:backwards, backwards;
+animation-duration:12s, 15s;
+}
+
+@keyframes leftright {
+  0%, 100%{left:20%;}
+	16.666%	{left:90%;}
+	33.333% {left:10%;}
+	50%			{left:50%;}
+  66.666%	{left:70%;}
+	83.333% {left:40%;}
+}
+
+@keyframes updown {
+  0%, 100%{top:0px;width:20px;height:20px}
+  25%{top:70%; }
+	50%{top:50%;width:30px;height:30px}
+	75%{top:70%;width:10px;height:10px }
+}
+
+
+.background__image5 {
+  background-image: url(../images/foggy.jpg);
+  height: auto; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  background-attachment: fixed;
+  overflow: hidden;
+
+}
+
+.form__page {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding:40px;
+}
+
+/*Sätta width/height på denna?*/
+.card {
+  display: flex;
+  justify-content: center;
+  max-width: 450px;
+  width: 100%;
+  height: 750px;
+  border-radius: 10px;
+  position: relative;
+  background-color: #1c3641;
+  border-radius: 2px;
+  opacity: 0.7;
+}
+
+
+
+.info__card2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  color:#fff;
+  max-width: 400px;
+  width: 100%;
+  position: relative;
+}
+
+.input-field {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 32px;
+  margin-bottom: 10px;
+  border: 2px solid rgb(91, 104, 104); 
+  background-color: rgb(255, 253, 249);
+  border-bottom-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  padding-left: 7px;
+}
+
+.input-title { 
+  font-family: 'Libre Baskerville', serif;
+  font-size: small;
+}
+
+.label {
+  display:block;
+  font-size: 12px;
+  box-sizing: border-box;
+  position: relative;
+  bottom:-2px;
+  z-index: 1;
+  width: 100%;
+  background-color: #0b1f24;
+  padding: 4px 7px;
+  font-size: medium;
+  color:white;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  box-shadow: #000;
+  cursor: default;
+}   
+
+.btn {
+  width: 180px;
+  height: 40px;
+  background-color:#0a1d22;
+  color:white; 
+  border-radius: 5px;
+  font-size: 15px;
+  font-family: 'Libre Baskerville', serif;
+  margin-top:12px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #000;
+  color:#fff;
+  width: 185px;
+  height: 42px;
+}
+
+.contact__link {
+  text-decoration: none;
+  color:#fff;
+}
+  
+.contact__link:hover {
+  color: #fff;
+}
+
+
+.btn__contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
