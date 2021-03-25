@@ -16,176 +16,58 @@ body {
   background-color: black;
 }
 
-.header__image {
-  background: url(../images/tree-736885_1280.jpg) no-repeat center;
-  position: relative;
-  width: 100%;
-  height: 900px;
-  background-size: cover;
-  background-attachment: fixed;
+.all__index {
+  display: flex;
+  justify-content: center;
+  height: 700px;
 }
 
-.bubbly-button {
-  font-family: "Helvetica", "Arial", sans-serif;
-  display: inline-block;
-  font-size: 1em;
-  padding: 1em 2em;
-  margin-top: 100px;
-  margin-bottom: 60px;
-  -webkit-appearance: none;
-  appearance: none;
-  background-color: #927619;
-  color: #000;
-  border-radius: 4px;
-  border: none;
-  cursor: pointer;
-  position: relative;
-  transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
-  box-shadow: 0 2px 25px #927619;
-}
-.bubbly-button:focus {
-  outline: 0;
-}
-.bubbly-button:before, .bubbly-button:after {
-  position: absolute;
-  content: "";
-  display: block;
-  width: 140%;
-  height: 100%;
-  left: -20%;
-  z-index: -1000;
-  transition: all ease-in-out 0.5s;
-  background-repeat: no-repeat;
-}
-.bubbly-button:before {
-  display: none;
-  top: -75%;
-  background-image: radial-gradient(circle, #927619 20%, transparent 20%), radial-gradient(circle, transparent 20%, #927619 20%, transparent 30%), radial-gradient(circle, #927619 20%, transparent 20%), radial-gradient(circle, #927619 20%, transparent 20%), radial-gradient(circle, transparent 10%, #927619 15%, transparent 20%), radial-gradient(circle, #927619 20%, transparent 20%), radial-gradient(circle, #927619 20%, transparent 20%), radial-gradient(circle, #927619 20%, transparent 20%), radial-gradient(circle, #927619 20%, transparent 20%);
-  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
-}
-.bubbly-button:after {
-  display: none;
-  bottom: -75%;
-  background-image: radial-gradient(circle, #927619 20%, transparent 20%), radial-gradient(circle, #927619 20%, transparent 20%), radial-gradient(circle, transparent 10%, #927619 15%, transparent 20%), radial-gradient(circle, #927619 20%, transparent 20%), radial-gradient(circle, #927619 20%, transparent 20%), radial-gradient(circle, #927619 20%, transparent 20%), radial-gradient(circle, #927619 20%, transparent 20%);
-  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
-}
-.bubbly-button:active {
-  transform: scale(0.9);
-  background-color: #7c6415;
-  box-shadow: 0 2px 25px #8d7115;
-}
-.bubbly-button.animate:before {
-  display: block;
-  animation: topBubbles ease-in-out 0.75s forwards;
-}
-.bubbly-button.animate:after {
-  display: block;
-  animation: bottomBubbles ease-in-out 0.75s forwards;
+.landing__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-@keyframes topBubbles {
-  0% {
-    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
-  }
-  50% {
-    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;
-  }
-  100% {
-    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
-    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
-  }
-}
-@keyframes bottomBubbles {
-  0% {
-    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%;
-  }
-  50% {
-    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;
-  }
-  100% {
-    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
-    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
-  }
-}
-/*Måste bara lära mig hur jag får den att skjuta bubblor SEN går den över till contact sidan*/
-.head__container {
-  /* Gör om detta till flex*/
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  overflow: hidden;
-  text-align: center;
-  color: white;
+.landing__text {
+  color: #fff;
   text-transform: uppercase;
-  max-width: 100%;
+}
+
+.background__image {
+  background-image: url(/images/frontbild.jpg);
+  min-height: 950px;
+  /* You must set a specified height SÄTT DETTA NÄR SIDOR ÄR KLARA OCH DU VET HEIGH*/
+  background-position: center;
+  /* Center the image */
+  background-repeat: no-repeat;
+  /* Do not repeat the image */
+  background-size: cover;
+  /* Resize the background image to cover the entire container */
+  background-attachment: fixed;
+  overflow: hidden;
+  /* Behöver overflow hidden någonstans?*/
+}
+
+.mini__logo {
+  margin-left: 40px;
 }
 
 .fa-angellist, .fa-venus, .fa-file-alt, .fa-folder, .fa-itunes-note, .fa-hand-point-left {
   color: #927619;
-  margin-left: 5px;
+  margin: 0px 10px 0px 10px;
 }
 
-/*
-  .header__text:hover {
-      color:black;
-      transition: all 0.3s ease 0s;
-      cursor: pointer;
-  }
-
-  .navbar__container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 10%;
-
-
-  }
-
-  .nav__li {
-    list-style: none;
-    display: inline-block;
-  }
-
-  .nav__link  {
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-    transition: all 0.3s ease 0s;
-    padding: 0px 20px;
-  }
-
-  .nav__link:hover {
-    color:#8d7115;
-  }
-
-
-.container {
-  display: inline-block;
-  cursor: pointer;
+.nav-links {
+  font-size: 20px;
+  text-decoration: none;
+  color: #fff;
 }
 
-.container:hover {
-  opacity: 0.6;
-}  
-
-
-.change .bar3 {
-  -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
-  transform: rotate(45deg) translate(-8px, -8px) ;
-}
-@media screen and (min-width: 0px) and (max-width: 769px) {
-  #my-content { display: none; }   
+.nav-links:hover {
+  color: #927619;
+  transition: all 0.3s ease;
 }
 
-@media screen and (min-width: 769px) and (max-width: 2000px) {
-  #menu { display: none; }   
-}
-
-@media screen and (min-width: 0px) and (max-width: 769px) {
-  .navbar { display: none; }   
-}
-*/
 .footer {
   position: relative;
   margin: 0;
@@ -250,7 +132,7 @@ body {
     box-shadow: 8px 5px 5px  #927619;
 }*/
 .background__image2 {
-  background-image: url(../images/jag.jpg);
+  background-image: url(../images/erica.jpg);
   background-color: #cccccc;
   /* Used if the image is unavailable */
   height: auto;
@@ -282,8 +164,15 @@ body {
   align-self: end;
 }
 
+.about__text-head {
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
 .about__text {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
   color: #e9e9e8;
   letter-spacing: 1px;
   margin: 10px 20px 20px 20px;
@@ -292,14 +181,13 @@ body {
 .all__about {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  height: 1000px;
+  height: 900px;
   position: relative;
 }
 
 .about__card {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
   flex-direction: column;
   max-width: 580px;
   max-height: 800px;
@@ -351,11 +239,12 @@ body {
   width: 100%;
   min-height: 50px;
   border-radius: 5px;
-  box-shadow: 1px 1px 2px 2px #c76666;
-  background-color: #571b2f;
+  box-shadow: 2px 2px 4px 4px #68a3dd;
+  background-color: #3d8dde;
   cursor: pointer;
   margin-top: 20px;
   margin-bottom: 20px;
+  font-family: "Poppins", sans-serif;
 }
 
 .nav__links {
@@ -365,9 +254,10 @@ body {
 }
 
 .btn__me:hover {
-  background-color: #a53c5c;
+  background-color: #224c75;
   font-size: large;
   font-weight: 400;
+  transition: all 0.3s ease;
 }
 
 .fa-envelope {
@@ -376,7 +266,7 @@ body {
 }
 
 .background__image1 {
-  background-image: url(../images/bakgrundcv.jpg);
+  background-image: url(../images/cv_bk.jpg);
   height: auto;
   /* You must set a specified height */
   background-position: center;
@@ -390,6 +280,11 @@ body {
   /* Behöver overflow hidden någonstans?*/
 }
 
+h4 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+}
+
 /*lek*/
 .all__cv {
   display: flex;
@@ -401,9 +296,6 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  max-width: 1800px;
-  width: 100%;
-  height: 800px;
   justify-content: space-evenly;
 }
 
@@ -419,7 +311,30 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  height: 500px;
+}
+
+.ex__box2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.head__text-box {
+  display: flex;
+  justify-content: center;
+}
+
+.head__text-cv {
+  display: flex;
+  justify-content: center;
+  background-color: #1e2933;
+  color: #fff;
+  opacity: 0.8;
+  margin: 40px 0px 40px 0px;
+  max-width: 320px;
+  width: 100%;
+  border-radius: 3px;
+  font-size: 40px;
 }
 
 h1 {
@@ -428,6 +343,10 @@ h1 {
 
 .front {
   opacity: 0.8;
+}
+
+.back {
+  font-family: "Roboto", sans-serif;
 }
 
 .fa-smile-beam {
@@ -486,7 +405,7 @@ h1 {
   position: relative;
   display: inline-block;
   margin-right: 2px;
-  margin-bottom: 1em;
+  margin-bottom: 16px;
   width: 340px;
 }
 .flip > .front,
@@ -497,13 +416,14 @@ h1 {
   background-size: cover !important;
   background-position: center !important;
   height: 240px;
-  padding: 1em 2em;
-  background: #673443;
+  padding: 16px 32px;
+  background: #a0ac98;
   border-radius: 10px;
 }
 .flip > .front p,
 .flip > .back p {
-  font-size: 0.9125rem;
+  font-size: 16px;
+  font-weight: 600;
   line-height: 160%;
   color: #ffff;
 }
@@ -525,13 +445,13 @@ h1 {
   flex-wrap: wrap;
   align-content: center;
   justify-content: space-around;
+  flex-direction: row-reverse;
   min-height: 800px;
 }
 
-.text-pic__box {
+.pic__box {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  align-self: center;
 }
 
 .text__email {
@@ -746,6 +666,7 @@ ul.fireflies {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  margin: 40px 0px 40px 0px;
 }
 
 .card1, .card2 {
@@ -756,6 +677,7 @@ ul.fireflies {
   height: 300px;
   background-color: #000;
   opacity: 0.7;
+  overflow: hidden;
 }
 
 .text {
@@ -851,9 +773,15 @@ ul.fireflies {
 
 .all__music {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
-  position: relative;
-  justify-content: space-around;
+  height: 2200px;
+  margin-top: 40px;
+}
+
+.text-spot__container {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .about__lionfly {
@@ -861,11 +789,20 @@ ul.fireflies {
   flex-wrap: wrap;
   justify-content: center;
   background-color: black;
+  color: #4897b5;
   max-width: 500px;
   width: 100%;
   opacity: 0.8;
   position: relative;
   border-radius: 5px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+}
+
+.about__text1 {
+  margin-top: 20px;
+  font-family: "Fredoka One", cursive;
+  color: #8d7115;
 }
 
 .about__text2 {
@@ -874,12 +811,35 @@ ul.fireflies {
 }
 
 .mini__text {
+  display: flex;
+  align-self: center;
+  align-items: center;
   opacity: 0.8;
-  color: white;
-  max-width: 200px;
+  color: #000;
+  background-color: #4897b5;
+  opacity: 0.6;
+  max-width: 300px;
   width: 100%;
+  height: 150px;
   letter-spacing: 3px;
+  border-radius: 5px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
   font-style: italic;
+}
+
+.fa-quote-left, .fa-quote-right {
+  color: #8d7115;
+}
+
+.spotify {
+  display: flex;
+  align-self: center;
+}
+
+.video__container {
+  display: flex;
+  flex-direction: column;
 }
 
 .dark__dreams, .epiphany, .lowly__coward, .down__lines {

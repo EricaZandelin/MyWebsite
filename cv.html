@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/ecfaedbce8.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Martel&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@500&family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="styles/normalize.css">
     <title>Erica CV</title>
@@ -21,7 +21,7 @@
                 
         <div class="container-fluid">
           <a class="navbar-brand" href="/index.html">
-            <img src="/images/EZ_mini.png" alt="" width="70" height="70">
+            <img class="mini__logo" src="/images/EZ_mini.png" alt="" width="70" height="70">
           </a>
           <form class="d-flex">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,22 +30,22 @@
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/index.html">Home<i class="fab fa-angellist"></i></a>
+                <a class="nav-links" aria-current="page" href="/index.html">Home<i class="fab fa-angellist"></i></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/about.html">About Me<i class="fas fa-venus"></i></a>
+                <a class="nav-links" href="/about.html">About Me<i class="fas fa-venus"></i></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/cv.html">CV<i class="far fa-file-alt"></i></a>
+                <a class="nav-links" href="/cv.html">CV<i class="far fa-file-alt"></i></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/portfolio.html">Portfolio<i class="far fa-folder"></i></a>
+                <a class="nav-links" href="/portfolio.html">Portfolio<i class="far fa-folder"></i></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/music.html">My Music<i class="fab fa-itunes-note"></i></a>
+                <a class="nav-links" href="/music.html">My Music<i class="fab fa-itunes-note"></i></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/contact.html">Contact Me<i class="far fa-hand-point-left"></i></a>
+                <a class="nav-links" href="/contact.html">Contact Me<i class="far fa-hand-point-left"></i></a>
               </li>
             </ul>
           </div>
@@ -55,15 +55,16 @@
     </header>
        
 <!-- horizontal -->
-
+<div class="head__text-box">
+    <h2 class="head__text-cv">Work</h2>
+    </div>
 <!--WORK-->
 <div class="work__box">
-
 
 <div class="flip">
     <div class="front">
         <h2 class="text-shadow">Oskarshamns Kommun</h2>
-        <h4><i>Project manager</i></h4>
+        <h4>Project manager</h4>
         <i class="fas fa-briefcase"></i>
     </div>
     <div class="back">
@@ -107,18 +108,21 @@
        <span>Jun 2018 - Aug 2018</span>
     </div>
 </div>
-<div class="flip">
-    <div class="front">
-       <h2 class="text-shadow">Indigo Secrets</h2>
-       <h4>Booking Manager</h4>
-       <i class="fas fa-briefcase"></i>
+            <div class="flip">
+                <div class="front">
+                <h2 class="text-shadow">Indigo Secrets</h2>
+                <h4>Booking Manager</h4>
+                <i class="fas fa-briefcase"></i>
+                </div>
+            <div class="back">
+            <p>Indigo Secrets was my own company where I helped booking artists and made bookings for my
+                own music. for example, I booked a swedish tour for the american artist "Arkansas Dave".</p>
+            <span>Jan 2018 - Jan 2020</span>
+            </div>
+        </div>
     </div>
-    <div class="back">
-       <p>Indigo Secrets was my own company where I helped booking artists and made bookings for my
-        own music. for example, I booked a swedish tour for the american artist "Arkansas Dave".</p>
-       <span>Jan 2018 - Jan 2020</span>
-    </div>
-</div>
+    
+    <div class="work__box">
 <div class="flip">
     <div class="front">
        <h2 class="text-shadow">Epidemic Sounds</h2>
@@ -191,8 +195,12 @@
     </div>
 </div>
 </div>
+    
 <!-- EDUCATION STARTS-->
+<div class="head__text-box">
 <h2 class="head__text-cv">Education</h2>
+</div>
+
 <div class="ed__box">
 
 <div class="flip">
@@ -256,7 +264,10 @@
 
 
 <!--EXPERIENCE START-->
+<div class="head__text-box">
 <h2 class="head__text-cv">Experience</h2>
+</div>
+
 <div class="ex__box">
 
 <div class="flip">
@@ -306,7 +317,8 @@
         <span> Feb 2018 - Feb 2018</span>
     </div>
 </div>
-
+</div>
+<div class=" ex__box2">
 <div class="flip">
     <div class="front">
        <h2 class="text-shadow">KUKA College</h2>
@@ -325,17 +337,13 @@
        <h4>Artist Coordinator</h4>
        <i class="far fa-smile-beam"></i>
     </div>
-    <div class="back">
-        <p>Worked as the artist coordinator at Latitud 57 festival. 2017 on the small stage and 
-            2018 main stage</p>
-        <span> Feb 2018 - Feb 2018</span>
+        <div class="back">
+            <p>Worked as the artist coordinator at Latitud 57 festival. 2017 on the small stage and 
+                2018 main stage</p>
+            <span> Feb 2018 - Feb 2018</span>
+        </div>
     </div>
-</div>
 
-<br>
-<br>
-
-  
 </div>    
 
             <footer>

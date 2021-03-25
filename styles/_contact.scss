@@ -6,13 +6,13 @@ h1 {
     flex-wrap: wrap;
     align-content: center;
     justify-content: space-around;
+    flex-direction: row-reverse;
     min-height: 800px;
 }
 
-.text-pic__box {
+.pic__box {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  align-self: center;
 }
 
 .text__email {

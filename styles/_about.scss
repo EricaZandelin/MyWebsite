@@ -17,7 +17,7 @@
 
 
 .background__image2{
-        background-image: url(../images/jag.jpg);
+        background-image: url(../images/erica.jpg);
         background-color: #cccccc; /* Used if the image is unavailable */
         height: auto; /* You must set a specified height SÄTT DETTA NÄR SIDOR ÄR KLARA OCH DU VET HEIGH*/
         background-position: center; /* Center the image */
@@ -44,8 +44,15 @@
     align-self: end;
 }
 
+.about__text-head {
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
 .about__text {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
     color:#e9e9e8;
     letter-spacing: 1px;
     margin: 10px 20px 20px 20px;
@@ -54,14 +61,13 @@
 .all__about {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
-    height: 1000px;
+    height: 900px;
     position: relative;
 }
 
 .about__card {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
     flex-direction: column;
     max-width: 580px;
     max-height: 800px;
@@ -124,11 +130,12 @@
     width: 100%;
     min-height: 50px;
     border-radius: 5px;
-    box-shadow: 1px 1px 2px 2px rgb(199, 102, 102);
-    background-color: #571b2f;
+    box-shadow: 2px 2px 4px 4px #68a3dd;
+    background-color: #3d8dde;
     cursor: pointer;
     margin-top: 20px;
     margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .nav__links {
@@ -138,9 +145,10 @@
 }
 
 .btn__me:hover {
-    background-color:#a53c5c; 
+    background-color:#224c75; 
     font-size: large;
     font-weight: 400;
+    transition: all 0.3s ease;
 }
 
 .fa-envelope {
