@@ -1,31 +1,19 @@
 
-
-/*h2 {
-    box-shadow: 8px 5px 5px  #927619;
-}
-.avatar__image {
-    display: flex;
-    flex-wrap: wrap;
-    box-shadow: 8px 5px 5px  #caaa3e;
-}
-.avatar__image2 {
-    display: flex;
-    flex-wrap: wrap;
-    display: flex;
-    box-shadow: 8px 5px 5px  #927619;
-}*/
-
-
 .background__image2{
-        background-image: url(../images/erica.jpg);
-        background-color: #cccccc; /* Used if the image is unavailable */
-        height: auto; /* You must set a specified height SÄTT DETTA NÄR SIDOR ÄR KLARA OCH DU VET HEIGH*/
-        background-position: center; /* Center the image */
-        background-repeat: no-repeat; /* Do not repeat the image */
-        background-size: cover; /* Resize the background image to cover the entire container */
-        background-attachment: fixed;
-        overflow: hidden;
-        /* Behöver overflow hidden någonstans?*/
+    background-image: url(../images/erica.jpg);
+    height: auto; /* FRÅGA: Måste man sätta en specifik höjd?*/
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+.all__about {
+    display: flex;
+    flex-wrap: wrap;
+    height: 900px;
+    position: relative;
 }
 
 .moi {
@@ -58,13 +46,6 @@
     margin: 10px 20px 20px 20px;
 }
 
-.all__about {
-    display: flex;
-    flex-wrap: wrap;
-    height: 900px;
-    position: relative;
-}
-
 .about__card {
     display: flex;
     justify-content: center;
@@ -78,41 +59,6 @@
     opacity: 0.8;
     cursor: pointer;
 }
-
-/*kolla hur du döljer knappen*/
-
-@media screen and (min-width: 0px) and (max-width: 768px) {
-    .about__card {
-        display: flex;
-        justify-content: center;
-        max-width: 700px;
-        max-height: 700px;
-    }
-
-    .about__text{
-        font-size:smaller;   
-    }
-
-    .all__about {
-        margin-right:50px;
-    }
-
-}
-
-@media screen and (min-width: 0px) and (max-width: 470px) {
-    
-    .about__card{
-        max-width: 370px;
-        max-height: 500px;
-    }
-
-    .about__text{
-        font-size:7px;   
-    }
-
-    
-}
-
 
 
 .fa-angellist {
@@ -153,5 +99,50 @@
 
 .fa-envelope {
     margin-left: 5px;
-    color:#927619;
+    color:#fff;
+}
+
+/*kolla hur du döljer knappen*/
+
+/* Ipad */ 
+@media screen and (min-width: 0px) and (max-width: 768px) {
+    .about__card {
+    display: flex;
+    justify-content: center;
+    max-width: 700px;
+    max-height: 700px;
+    align-self: center;
+}
+
+    .about__text{
+        font-size:smaller;   
+    }
+
+    .all__about {
+        margin-right:50px;
+    }
+
+    .btn__me {
+        max-width: 30px;
+    }
+
+}
+
+/*FRÅGA - hur får jag knappen minskad i mobilstorlek? haha*/ 
+
+/*Mobil*/
+@media screen and (min-width: 0px) and (max-width: 470px) {
+    
+    .all__about {
+        height: 600px;
+    }
+    .about__card{
+        max-width: 370px;
+        max-height: 500px;
+    }
+
+    .about__text{
+        font-size:7px;   
+    }
+    
 }

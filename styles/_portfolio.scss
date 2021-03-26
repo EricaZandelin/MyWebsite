@@ -1,4 +1,14 @@
 
+.background__image4{
+    background-image: url(../images/fog.jpg);
+    height: auto; /* Samma fråga */ 
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
 .all__portfolio {
     display: flex;
     flex-wrap: wrap;
@@ -8,7 +18,6 @@
 
 .cards__port-container {
     display: flex;
-    flex-direction: row;
     justify-content: space-evenly;
     margin: 40px 0px 40px 0px;
 }
@@ -39,24 +48,11 @@
     color:#8d7115;
 }
 
-.background__image4{
-    background-image: url(../images/fog.jpg);
-    background-color: #000; /* Used if the image is unavailable */
-    height: auto; /* You must set a specified height SÄTT DETTA NÄR SIDOR ÄR KLARA OCH DU VET HEIGH*/
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover; /* Resize the background image to cover the entire container */
-    background-attachment: fixed;
-    overflow: hidden;
-    /* Behöver overflow hidden någonstans?*/
-}
-
 .skills__box {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
 
 .rec1 {
     background-color: rgba(39, 105, 30, 0.637);
@@ -92,4 +88,20 @@
     background-color: #6735;
     max-width: 400px;
     width: 100%;
+}
+
+@media screen and (min-width: 807px) and (max-width: 1039px) {
+    .card1, .card2 {
+        width:400px ;
+    }
+
+}
+
+/* Fråga - Varför kopplas in denna? när man kollar inspection tools ser man media.q på det ovan, men inte här..så gissar det är något med "kopplingen" som gör
+att jag inte kan skriva? För det ska gå att göra columm haha.*/ 
+
+@media screen and (min-width: 0px) and (max-width: 807) {
+    .cards__port-container{
+        flex-direction: column;
+    }
 }

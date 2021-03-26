@@ -29,7 +29,7 @@
     font-family: 'Josefin Sans', sans-serif; 
   }
 
-  .fa {
+  .fa, .fa-github {
     padding: 20px;
     font-size: 30px;
     width: 50px;
@@ -38,12 +38,12 @@
     margin: 5px 2px;
   }
 
-  .fa-facebook, .fa-twitter, .fa-linkedin, .fa-pinterest, .fa-youtube {
+  .fa-facebook, .fa-github, .fa-linkedin, .fa-youtube {
     color: white;
   }
 
 
-  .fa-facebook:hover, .fa-twitter:hover, .fa-linkedin:hover, .fa-pinterest:hover, .fa-youtube:hover {
+  .fa-facebook:hover, .fa-github:hover, .fa-linkedin:hover, .fa-youtube:hover {
     color: 	#8d7115;
     transition: all 0.3s ease 0s;
   }

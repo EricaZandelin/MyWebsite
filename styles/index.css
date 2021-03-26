@@ -99,7 +99,7 @@ body {
   font-family: "Josefin Sans", sans-serif;
 }
 
-.fa {
+.fa, .fa-github {
   padding: 20px;
   font-size: 30px;
   width: 50px;
@@ -108,35 +108,19 @@ body {
   margin: 5px 2px;
 }
 
-.fa-facebook, .fa-twitter, .fa-linkedin, .fa-pinterest, .fa-youtube {
+.fa-facebook, .fa-github, .fa-linkedin, .fa-youtube {
   color: white;
 }
 
-.fa-facebook:hover, .fa-twitter:hover, .fa-linkedin:hover, .fa-pinterest:hover, .fa-youtube:hover {
+.fa-facebook:hover, .fa-github:hover, .fa-linkedin:hover, .fa-youtube:hover {
   color: #8d7115;
   transition: all 0.3s ease 0s;
 }
 
-/*h2 {
-    box-shadow: 8px 5px 5px  #927619;
-}
-.avatar__image {
-    display: flex;
-    flex-wrap: wrap;
-    box-shadow: 8px 5px 5px  #caaa3e;
-}
-.avatar__image2 {
-    display: flex;
-    flex-wrap: wrap;
-    display: flex;
-    box-shadow: 8px 5px 5px  #927619;
-}*/
 .background__image2 {
   background-image: url(../images/erica.jpg);
-  background-color: #cccccc;
-  /* Used if the image is unavailable */
   height: auto;
-  /* You must set a specified height SÄTT DETTA NÄR SIDOR ÄR KLARA OCH DU VET HEIGH*/
+  /* FRÅGA: Måste man sätta en specifik höjd?*/
   background-position: center;
   /* Center the image */
   background-repeat: no-repeat;
@@ -145,7 +129,13 @@ body {
   /* Resize the background image to cover the entire container */
   background-attachment: fixed;
   overflow: hidden;
-  /* Behöver overflow hidden någonstans?*/
+}
+
+.all__about {
+  display: flex;
+  flex-wrap: wrap;
+  height: 900px;
+  position: relative;
 }
 
 .moi {
@@ -178,13 +168,6 @@ body {
   margin: 10px 20px 20px 20px;
 }
 
-.all__about {
-  display: flex;
-  flex-wrap: wrap;
-  height: 900px;
-  position: relative;
-}
-
 .about__card {
   display: flex;
   justify-content: center;
@@ -199,33 +182,6 @@ body {
   cursor: pointer;
 }
 
-/*kolla hur du döljer knappen*/
-@media screen and (min-width: 0px) and (max-width: 768px) {
-  .about__card {
-    display: flex;
-    justify-content: center;
-    max-width: 700px;
-    max-height: 700px;
-  }
-
-  .about__text {
-    font-size: smaller;
-  }
-
-  .all__about {
-    margin-right: 50px;
-  }
-}
-@media screen and (min-width: 0px) and (max-width: 470px) {
-  .about__card {
-    max-width: 370px;
-    max-height: 500px;
-  }
-
-  .about__text {
-    font-size: 7px;
-  }
-}
 .fa-angellist {
   color: #927619;
 }
@@ -262,9 +218,48 @@ body {
 
 .fa-envelope {
   margin-left: 5px;
-  color: #927619;
+  color: #fff;
 }
 
+/*kolla hur du döljer knappen*/
+/* Ipad */
+@media screen and (min-width: 0px) and (max-width: 768px) {
+  .about__card {
+    display: flex;
+    justify-content: center;
+    max-width: 700px;
+    max-height: 700px;
+    align-self: center;
+  }
+
+  .about__text {
+    font-size: smaller;
+  }
+
+  .all__about {
+    margin-right: 50px;
+  }
+
+  .btn__me {
+    max-width: 30px;
+  }
+}
+/*FRÅGA - hur får jag knappen minskad i mobilstorlek? haha*/
+/*Mobil*/
+@media screen and (min-width: 0px) and (max-width: 470px) {
+  .all__about {
+    height: 600px;
+  }
+
+  .about__card {
+    max-width: 370px;
+    max-height: 500px;
+  }
+
+  .about__text {
+    font-size: 7px;
+  }
+}
 .background__image1 {
   background-image: url(../images/cv_bk.jpg);
   height: auto;
@@ -277,7 +272,6 @@ body {
   /* Resize the background image to cover the entire container */
   background-attachment: fixed;
   overflow: hidden;
-  /* Behöver overflow hidden någonstans?*/
 }
 
 h4 {
@@ -285,36 +279,15 @@ h4 {
   font-weight: 600;
 }
 
-/*lek*/
 .all__cv {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
 
-.work__box {
+.work__box, .ed__box, .ex__box, .ex__box2 {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-}
-
-.ed__box {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-}
-
-.ex__box {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-}
-
-.ex__box2 {
-  display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
@@ -335,10 +308,6 @@ h4 {
   width: 100%;
   border-radius: 3px;
   font-size: 40px;
-}
-
-h1 {
-  font-size: 2.2em;
 }
 
 .front {
@@ -432,10 +401,6 @@ h1 {
   text-shadow: 1px 1px rgba(0, 0, 0, 0.04), 2px 2px rgba(0, 0, 0, 0.04), 3px 3px rgba(0, 0, 0, 0.04), 4px 4px rgba(0, 0, 0, 0.04), 0.125rem 0.125rem rgba(0, 0, 0, 0.04), 6px 6px rgba(0, 0, 0, 0.04), 7px 7px rgba(0, 0, 0, 0.04), 8px 8px rgba(0, 0, 0, 0.04), 9px 9px rgba(0, 0, 0, 0.04), 0.3125rem 0.3125rem rgba(0, 0, 0, 0.04), 11px 11px rgba(0, 0, 0, 0.04), 12px 12px rgba(0, 0, 0, 0.04), 13px 13px rgba(0, 0, 0, 0.04), 14px 14px rgba(0, 0, 0, 0.04), 0.625rem 0.625rem rgba(0, 0, 0, 0.04), 16px 16px rgba(0, 0, 0, 0.04), 17px 17px rgba(0, 0, 0, 0.04), 18px 18px rgba(0, 0, 0, 0.04), 19px 19px rgba(0, 0, 0, 0.04), 1.25rem 1.25rem rgba(0, 0, 0, 0.04);
 }
 
-.head__text-cv {
-  display: flex;
-}
-
 h1 {
   color: #000;
 }
@@ -468,6 +433,7 @@ h1 {
   margin-bottom: 10px;
 }
 
+/* fireflies section */
 ul.fireflies {
   list-style: none;
 }
@@ -544,6 +510,7 @@ ul.fireflies {
     height: 10px;
   }
 }
+/*Fireflies section done*/
 .background__image5 {
   background-image: url(../images/foggy.jpg);
   height: auto;
@@ -561,7 +528,10 @@ ul.fireflies {
   padding: 40px;
 }
 
-/*Sätta width/height på denna?*/
+.contact__head {
+  color: #fff;
+}
+
 .card {
   display: flex;
   justify-content: center;
@@ -583,6 +553,8 @@ ul.fireflies {
   max-width: 400px;
   width: 100%;
   position: relative;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.5px;
 }
 
 .input-field {
@@ -590,15 +562,14 @@ ul.fireflies {
   width: 100%;
   min-height: 32px;
   margin-bottom: 10px;
-  border: 2px solid #5b6868;
-  background-color: #fffdf9;
+  border: 2px solid #333232;
+  background-color: #fff;
   border-bottom-left-radius: 5px;
   border-bottom-left-radius: 5px;
   padding-left: 7px;
 }
 
 .input-title {
-  font-family: "Libre Baskerville", serif;
   font-size: small;
 }
 
@@ -618,6 +589,10 @@ ul.fireflies {
   border-top-left-radius: 5px;
   box-shadow: #000;
   cursor: default;
+}
+
+.message__area {
+  width: 100%;
 }
 
 .btn {
@@ -655,6 +630,58 @@ ul.fireflies {
   align-items: center;
 }
 
+.tusse {
+  max-width: 450px;
+  width: 100%;
+  height: 550px;
+}
+
+.copyright {
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  margin-top: 5px;
+}
+
+@media screen and (min-width: 0px) and (max-width: 897px) {
+  .tusse {
+    margin-bottom: 10px;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 450px) {
+  .tusse {
+    width: 320px;
+    height: 380px;
+  }
+
+  .card {
+    width: 320px;
+    height: 520px;
+  }
+
+  .info__card2 {
+    display: none;
+  }
+
+  .contact__head {
+    font-size: 17px;
+    display: flex;
+    justify-content: center;
+  }
+}
+.background__image4 {
+  background-image: url(../images/fog.jpg);
+  height: auto;
+  /* Samma fråga */
+  background-position: center;
+  /* Center the image */
+  background-repeat: no-repeat;
+  /* Do not repeat the image */
+  background-size: cover;
+  /* Resize the background image to cover the entire container */
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
 .all__portfolio {
   display: flex;
   flex-wrap: wrap;
@@ -664,7 +691,6 @@ ul.fireflies {
 
 .cards__port-container {
   display: flex;
-  flex-direction: row;
   justify-content: space-evenly;
   margin: 40px 0px 40px 0px;
 }
@@ -693,23 +719,6 @@ ul.fireflies {
 
 .fa-github:hover {
   color: #8d7115;
-}
-
-.background__image4 {
-  background-image: url(../images/fog.jpg);
-  background-color: #000;
-  /* Used if the image is unavailable */
-  height: auto;
-  /* You must set a specified height SÄTT DETTA NÄR SIDOR ÄR KLARA OCH DU VET HEIGH*/
-  background-position: center;
-  /* Center the image */
-  background-repeat: no-repeat;
-  /* Do not repeat the image */
-  background-size: cover;
-  /* Resize the background image to cover the entire container */
-  background-attachment: fixed;
-  overflow: hidden;
-  /* Behöver overflow hidden någonstans?*/
 }
 
 .skills__box {
@@ -754,12 +763,22 @@ ul.fireflies {
   width: 100%;
 }
 
+@media screen and (min-width: 807px) and (max-width: 1039px) {
+  .card1, .card2 {
+    width: 400px;
+  }
+}
+/* Fråga - Varför kopplas in denna? när man kollar inspection tools ser man media.q på det ovan, men inte här..så gissar det är något med "kopplingen" som gör
+att jag inte kan skriva? För det ska gå att göra columm haha.*/
+@media screen and (min-width: 0px) and (max-width: 807) {
+  .cards__port-container {
+    flex-direction: column;
+  }
+}
 .background__image3 {
   background-image: url(/images/leonfli.jpg);
-  background-color: #cccccc;
-  /* Used if the image is unavailable */
   height: auto;
-  /* You must set a specified height SÄTT DETTA NÄR SIDOR ÄR KLARA OCH DU VET HEIGH*/
+  /* samma fråga på alla dessa sidor*/
   background-position: center;
   /* Center the image */
   background-repeat: no-repeat;
@@ -768,14 +787,13 @@ ul.fireflies {
   /* Resize the background image to cover the entire container */
   background-attachment: fixed;
   overflow: hidden;
-  /* Behöver overflow hidden någonstans?*/
 }
 
 .all__music {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  height: 2200px;
+  height: 2500px;
   margin-top: 40px;
 }
 
@@ -797,6 +815,7 @@ ul.fireflies {
   border-radius: 5px;
   font-family: "Roboto", sans-serif;
   font-weight: 600;
+  margin-bottom: 10px;
 }
 
 .about__text1 {
@@ -815,16 +834,13 @@ ul.fireflies {
   align-self: center;
   align-items: center;
   opacity: 0.8;
-  color: #000;
-  background-color: #4897b5;
-  opacity: 0.6;
+  color: #fff;
   max-width: 300px;
   width: 100%;
   height: 150px;
   letter-spacing: 3px;
   border-radius: 5px;
   font-family: "Roboto", sans-serif;
-  font-weight: 600;
   font-style: italic;
 }
 
@@ -842,7 +858,33 @@ ul.fireflies {
   flex-direction: column;
 }
 
-.dark__dreams, .epiphany, .lowly__coward, .down__lines {
-  margin-top: 20px;
-  margin-bottom: 20px;
+.dark__dreams, .epiphany, .down__lines, .lowly__coward {
+  max-width: 820px;
+  width: 100%;
+  height: 460px;
+}
+
+.dark__dreams-box, .epiphany-box, .down__lines-box {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+@media screen and (min-width: 0px) and (max-width: 1047px) {
+  .mini__text, .spotify {
+    display: none;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 810px) {
+  .dark__dreams, .epiphany, .down__lines, .lowly__coward {
+    max-width: 600px;
+    height: 360px;
+  }
+
+  .about__lionfly {
+    max-width: 400px;
+  }
+
+  .all__music {
+    height: 2300px;
+  }
 }
