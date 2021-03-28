@@ -1,12 +1,12 @@
 
 .background__image4{
     background-image: url(../images/fog.jpg);
-    height: auto; /* Samma fråga */ 
+    height: auto; 
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover; /* Resize the background image to cover the entire container */
+    background-size: cover; 
     background-attachment: fixed;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .all__portfolio {
@@ -20,6 +20,10 @@
     display: flex;
     justify-content: space-evenly;
     margin: 40px 0px 40px 0px;
+}
+
+.card__head-text {
+    font-family: 'Fredoka One', cursive;
 }
 
 .card1, .card2 {
@@ -36,6 +40,7 @@
 .text {
     color:#fff;
     margin: 5px;
+    font-family: 'Roboto', sans-serif;
 }
 
 .fa-github {
@@ -100,8 +105,17 @@
 /* Fråga - Varför kopplas in denna? när man kollar inspection tools ser man media.q på det ovan, men inte här..så gissar det är något med "kopplingen" som gör
 att jag inte kan skriva? För det ska gå att göra columm haha.*/ 
 
-@media screen and (min-width: 0px) and (max-width: 807) {
+@media screen and (min-width: 0px) and (max-width: 807px) {
+
+    .all__portfolio {
+        height: 1100px;
+    }
     .cards__port-container{
         flex-direction: column;
+        align-items: center;
+    }
+
+    .card1 {
+        margin-bottom: 10px;
     }
 }

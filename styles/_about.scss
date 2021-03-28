@@ -1,12 +1,12 @@
 
 .background__image2{
     background-image: url(../images/erica.jpg);
-    height: auto; /* FRÅGA: Måste man sätta en specifik höjd?*/
+    height: auto; 
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover; /* Resize the background image to cover the entire container */
+    background-size: cover; 
     background-attachment: fixed;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .all__about {
@@ -21,7 +21,7 @@
     flex-wrap: wrap;
     position: relative;
     align-self: center;
-    max-height: 300px;
+    height: 300px;
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -51,7 +51,7 @@
     justify-content: center;
     flex-direction: column;
     max-width: 580px;
-    max-height: 800px;
+    height: 800px;
     width: 100%;
     margin-left: 50px;
     background-color: black;
@@ -90,6 +90,10 @@
     font-family: 'Fredoka One', cursive;
 }
 
+.nav__links:hover {
+    color: #fff;
+}
+
 .btn__me:hover {
     background-color:#224c75; 
     font-size: large;
@@ -123,7 +127,7 @@
     }
 
     .btn__me {
-        max-width: 30px;
+        visibility: hidden;
     }
 
 }

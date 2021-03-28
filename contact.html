@@ -11,7 +11,32 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@500&family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/index.css">
-    <title>Erica CV</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <title>Contact</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/integration
+            emailjs.init('user_GVupgE4O0TyGGTIzzCuw6');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('service_47ki44j', 'template_vwqpbsl', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+                    document.getElementById("contact-form").reset();
+            });
+        }
+    </script>
 </head>
 <body>
   <div class="background__image5">
@@ -19,8 +44,8 @@
             <nav class="navbar navbar-fixed-bottom navbar-expand-md navbar-dark">
                 
                 <div class="container-fluid">
-                  <a class="navbar-brand" href="/index.html">
-                    <img class="mini__logo" src="/images/EZ_mini.png" alt="" width="70" height="70">
+                  <a class="navbar-brand" href="index.html">
+                    <img class="mini__logo" src="images/EZ_mini.png" alt="" width="70" height="70">
                   </a>
                   <form class="d-flex">
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,22 +54,22 @@
                   <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav">
                       <li class="nav-item">
-                        <a class="nav-links" aria-current="page" href="/index.html">Home<i class="fab fa-angellist"></i></a>
+                        <a class="nav-links" aria-current="page" href="index.html">Home<i class="fab fa-angellist"></i></a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-links" href="/about.html">About Me<i class="fas fa-venus"></i></a>
+                        <a class="nav-links" href="about.html">About Me<i class="fas fa-venus"></i></a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-links" href="/cv.html">CV<i class="far fa-file-alt"></i></a>
+                        <a class="nav-links" href="cv.html">CV<i class="far fa-file-alt"></i></a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-links" href="/portfolio.html">Portfolio<i class="far fa-folder"></i></a>
+                        <a class="nav-links" href="portfolio.html">Portfolio<i class="far fa-folder"></i></a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-links" href="/music.html">My Music<i class="fab fa-itunes-note"></i></a>
+                        <a class="nav-links" href="music.html">My Music<i class="fab fa-itunes-note"></i></a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-links" href="/contact.html">Contact Me<i class="far fa-hand-point-left"></i></a>
+                        <a class="nav-links" href="contact.html">Contact Me<i class="far fa-hand-point-left"></i></a>
                       </li>
                     </ul>
                   </div>
@@ -68,38 +93,30 @@
                           </div>
                         </div>
                        
-                    <div class="card">
-                      <form class="form__page" autocomplete="on">
-      
-                          <div class="info__card2">
-                            <p>If you want to contact me, either send a mail through the contact form, or contact me on my social media plattforms that 
-                                are available at the icons on the bottom of this page. Have a lovely day, looking forward to hearing from you 
-                            </p>
-                          </div>
-                                <h1 class="contact__head">Contact Me</h1>
-                                <label for="name" class="label">Your Name</label>
-                                <input type="text" name="name" id="name" class="input-field" placeholder="Your name" required autofocus> 
-                                <label for="email" class="label">Email Adress</label> 
-                                <input type="email" name="email" id="email" class="input-field" placeholder="Your email" required autofocus>
-                                <textarea class="message__area" name="message" id="message" cols="40" rows="10" required minlength="50">
-                                </textarea>
-                                
-                              <div class="btn__contact-container">
-                                  <button class="btn" type="submit"><a href = "mailto:ericazandelin93@gmail.com" class="contact__link">Send</a></button>
-                                  <div class="copyright">&copy; Copyright &nbsp;2021</div>
-                              </div>
-                      </form>
-                    </div>
-
+                   
+                 
+                   <div class="form__container">    
+                    <form id="contact-form" class="form__contact">
+                      <h1>Contact Me</h1>
+                      <input type="hidden" name="contact_number">
+                      <label>Name</label>
+                      <input type="text" name="name" class="inputs" placeholder="Your Name">
+                      <label>Email</label>
+                      <input type="email" name="email" class="inputs" placeholder="Your Email">
+                      <label>Message</label>
+                      <textarea name="message" class="msg__bar"></textarea>
+                      <input type="submit" value="Send" class="sends">
+                  </form>
+                   </div> 
              </section>         
-              <footer>
-                <div class="footer__box">
-                  <a href="https://www.facebook.com/erica.zandelin/" class="fa fa-facebook"></a>
-                  <a href="https://github.com/EricaZandelin" class="fab fa-github"></a>
-                  <a href="https://www.linkedin.com/in/erica-zandelin-098086177/" class="fa fa-linkedin"></a>
-                  <a href="https://www.youtube.com/channel/UC7fKvrwPW_NhW-mn7O08lzQ" class="fa fa-youtube"></a>
-                </div>
-              </footer>
+             <footer>
+              <div class="footer__box">
+                <a href="https://www.facebook.com/LionflySecrets" class="fa fa-facebook" target="_blank"></a>
+                <a href="https://github.com/EricaZandelin" class="fab fa-github" target="_blank"></a>
+                <a href="https://www.linkedin.com/in/erica-zandelin-098086177/" class="fa fa-linkedin" target="_blank"></a>
+                <a href="https://www.youtube.com/channel/UCCWj07xt8vNdXAqfwJbIg2g" class="fa fa-youtube" target="_blank"></a>
+              </div>
+            </footer>
     </div>
     
     <script src="script/logic.js"></script>

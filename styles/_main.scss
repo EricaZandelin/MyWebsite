@@ -6,10 +6,20 @@ body{
   background-color: black;
 }
 
+.background__image {
+  background-image: url(../images/frontbild.jpg);
+  height: auto; 
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; 
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+
 .all__index {
   display: flex;
   justify-content: center;
-  height: 700px;
+  height: 780px;
 }
 
 .landing__container {
@@ -23,13 +33,16 @@ body{
   text-transform: uppercase;
 }
 
-.background__image {
-  background-image: url(/images/frontbild.jpg);
-  min-height: 950px; /* You must set a specified height SÄTT DETTA NÄR SIDOR ÄR KLARA OCH DU VET HEIGH*/
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
-  background-attachment: fixed;
-  overflow: hidden;
-  /* Behöver overflow hidden någonstans?*/
+
+
+@media screen and (min-width: 375px) and (max-width: 1300px) {
+  .all__index {
+    height: 850px;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 374px) {
+  .all__index {
+    height: 400px;
+  }
 }

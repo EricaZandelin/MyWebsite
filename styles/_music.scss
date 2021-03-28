@@ -1,11 +1,11 @@
 .background__image3 {
-    background-image: url(/images/leonfli.jpg);
-    height: auto; /* samma fråga på alla dessa sidor*/
+    background-image: url(../images/leonfli.jpg);
+    height: auto; 
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover; /* Resize the background image to cover the entire container */
+    background-size: cover; 
     background-attachment: fixed;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .all__music{
