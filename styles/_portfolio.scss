@@ -22,6 +22,8 @@
     margin: 40px 0px 40px 0px;
 }
 
+
+
 .card__head-text {
     font-family: 'Fredoka One', cursive;
 }
@@ -37,11 +39,29 @@
     overflow: hidden;
 }
 
-.text {
+.text-portfolio {
     color:#fff;
     margin: 5px;
     font-family: 'Roboto', sans-serif;
 }
+
+.felicia__btn {
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #85979d;
+    color:#000;
+    cursor: pointer;
+    font-weight: 800;
+}
+
+.felicia__btn:hover {
+    background-color: #2d292d;
+    color:#fff;
+    transition: all 0.3s ease-in-out;
+}
+
+
 
 .fa-github {
     color:#fff;
