@@ -66,7 +66,6 @@
 }
 
 
-
 .btn__me {
    
     max-width: 150px;
@@ -106,17 +105,15 @@
 /*kolla hur du döljer knappen*/
 
 /* Ipad */ 
-@media screen and (min-width: 0px) and (max-width: 768px) {
+@media screen and (min-width: 470px) and (max-width: 768px) {
     .about__card {
     display: flex;
     justify-content: center;
-    max-width: 700px;
-    max-height: 700px;
     align-self: center;
 }
 
     .about__text{
-        font-size:smaller;   
+        font-size:13px;   
     }
 
     .all__about {
@@ -132,18 +129,27 @@
 /*FRÅGA - hur får jag knappen minskad i mobilstorlek? haha*/ 
 
 /*Mobil*/
-@media screen and (min-width: 0px) and (max-width: 470px) {
+@media screen and (min-width: 0px) and (max-width: 469px) {
     
     .all__about {
-        height: 600px;
+        height: 1200px;
+        align-content: center;
     }
-    .about__card{
-        max-width: 370px;
-        max-height: 500px;
+   
+    .about__text{
+        font-size:13px;   
     }
 
-    .about__text{
-        font-size:7px;   
+    .about__card {
+        align-content: center;
+        margin-right: 50px;
+        width: 400px;
+        height: 1000px;
     }
+
+    .btn__me {
+        visibility: hidden;
+    }
+
     
 }

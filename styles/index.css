@@ -36,7 +36,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 780px;
+  height: 830px;
 }
 
 .landing__container {
@@ -255,7 +255,7 @@ body {
 
 /*kolla hur du döljer knappen*/
 /* Ipad */
-@media screen and (min-width: 0px) and (max-width: 768px) {
+@media screen and (min-width: 470px) and (max-width: 768px) {
   .about__card {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -263,13 +263,11 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    max-width: 700px;
-    max-height: 700px;
     -ms-flex-item-align: center;
         align-self: center;
   }
   .about__text {
-    font-size: smaller;
+    font-size: 13px;
   }
   .all__about {
     margin-right: 50px;
@@ -281,16 +279,24 @@ body {
 
 /*FRÅGA - hur får jag knappen minskad i mobilstorlek? haha*/
 /*Mobil*/
-@media screen and (min-width: 0px) and (max-width: 470px) {
+@media screen and (min-width: 0px) and (max-width: 469px) {
   .all__about {
-    height: 600px;
-  }
-  .about__card {
-    max-width: 370px;
-    max-height: 500px;
+    height: 1200px;
+    -ms-flex-line-pack: center;
+        align-content: center;
   }
   .about__text {
-    font-size: 7px;
+    font-size: 13px;
+  }
+  .about__card {
+    -ms-flex-line-pack: center;
+        align-content: center;
+    margin-right: 50px;
+    width: 400px;
+    height: 1000px;
+  }
+  .btn__me {
+    visibility: hidden;
   }
 }
 
@@ -510,7 +516,8 @@ h4 {
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
-  height: 1200px;
+  height: 800px;
+  width: 100%;
 }
 
 .pic__box {
@@ -723,7 +730,16 @@ ul.fireflies {
   height: 550px;
 }
 
+@media screen and (min-width: 1023px) and (max-width: 1370px) {
+  .all__contact-page {
+    height: 1400px;
+  }
+}
+
 @media screen and (min-width: 449px) and (max-width: 897px) {
+  .all__contact-page {
+    height: 1200px;
+  }
   .tusse {
     width: 400px;
     height: 500px;
@@ -757,6 +773,18 @@ ul.fireflies {
   .tusse {
     width: 250px;
     height: 260px;
+  }
+  .form__container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 250px;
+    height: 420px;
+    margin-top: 20px;
+  }
+  .form__contact {
+    width: 200px;
+    height: 400px;
   }
 }
 

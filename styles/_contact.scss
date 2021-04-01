@@ -17,7 +17,8 @@
   align-content: center;
   justify-content: space-around;
   flex-direction: row-reverse;
-  height: 1200px;
+  height: 800px;
+  width: 100%;
 }
 
 .pic__box {
@@ -131,7 +132,19 @@ animation-duration:12s, 15s;
   height:550px;
 }
 
+
+@media screen and (min-width: 1023px) and (max-width: 1370px) {
+  .all__contact-page{
+  height: 1400px;
+  }
+}
+
 @media screen and (min-width: 449px) and (max-width: 897px) {
+
+  .all__contact-page {
+    height: 1200px;
+  }
+
   .tusse {
     width: 400px;
     height: 500px;
@@ -167,6 +180,18 @@ animation-duration:12s, 15s;
   .tusse {
     width: 250px;
     height: 260px;
+  }
+
+  .form__container{
+    justify-content: center;
+    width: 250px;
+    height: 420px;
+    margin-top: 20px;
+  }
+
+  .form__contact{
+    width: 200px;
+    height: 400px;
   }
   
 }
