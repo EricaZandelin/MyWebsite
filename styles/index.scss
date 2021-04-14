@@ -5,7 +5,13 @@
 }
 
 body {
-    width:100%
+    width:100%;
+    font-family: 'Roboto', sans-serif; 
+}
+
+h1, h2 {
+    color:#fff;
+    font-family: 'Bebas Neue', cursive;
 }
 
 @import'main';

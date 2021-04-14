@@ -1,42 +1,61 @@
 
 .background__image4{
-    background-image: url(../images/fog.jpg);
+    background-image: url(../images/EZ_mindre.png);
     height: auto; 
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
+    background-position: center; 
+    background-repeat: no-repeat; 
     background-size: cover; 
     background-attachment: fixed;
     overflow-x: hidden;
 }
 
+
 .all__portfolio {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    height: 900px;
+    height: 1400px;
 }
 
 .cards__port-container {
     display: flex;
     justify-content: space-evenly;
-    margin: 40px 0px 40px 0px;
+    flex-direction: column;
+    align-items: center;
+    height: 1200px;
 }
 
 
 
-.card__head-text {
-    font-family: 'Fredoka One', cursive;
+.head__port-text {
+    font-size: 50px;
 }
 
-.card1, .card2 {
+.card1 {
     display: flex;
     align-items: center;
+    align-self: center;
     max-width: 500px;
     width: 100%;
     height: 300px;
     background-color: #000;
+    color:#fff;
     opacity: 0.7;
     overflow: hidden;
+    border-style: solid;
+}
+
+.card2 {
+    display: flex;
+    align-items: center;
+    max-width: 800px;
+    width: 100%;
+    height: 500px;
+    background-color: #000;
+    color:#fff;
+    opacity: 0.7;
+    overflow: hidden;
+    border-style: solid;
 }
 
 .text-portfolio {
@@ -46,22 +65,65 @@
 }
 
 .felicia__btn {
-    width: 150px;
-    height: 40px;
+    width: 180px;
+    height: 60px;
     border-radius: 5px;
-    background-color: #85979d;
-    color:#000;
+    background:none;
+    border-style: solid;
+    color:#fff;
     cursor: pointer;
     font-weight: 800;
 }
 
 .felicia__btn:hover {
-    background-color: #2d292d;
-    color:#fff;
+    background-color: rgba(214, 19, 19, 0.637);
+    color:#000;
     transition: all 0.3s ease-in-out;
 }
 
+/*Felicia box*/ 
 
+.container {
+    position: relative;
+    width: 50%;
+  }
+  
+  .image {
+    opacity: 1;
+    display: block;
+    max-width: 400px;
+    height: 800px;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+  
+  .middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .container:hover .image {
+    opacity: 0.3;
+  }
+  
+  .container:hover .middle {
+    opacity: 1;
+  }
+  
+  .text {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    padding: 16px 32px;
+  }
 
 .fa-github {
     color:#fff;
@@ -69,48 +131,47 @@
     text-decoration: none;
 }
 
-.fa-github:hover {
-    color:#8d7115;
-}
-
 .skills__box {
     display: flex;
     flex-direction: column;
     align-items: center;
+    color:#fff;
+    max-width: 400px;
+    width: 100%;
 }
 
 .rec1 {
-    background-color: rgba(39, 105, 30, 0.637);
+    background-color: rgba(214, 19, 19, 0.637);
     max-width: 400px;
     width: 100%;
 }
 
 .rec2 {
-    background-color:#7357;
+    background-color:rgba(2, 5, 170, 0.467);
     max-width: 400px;
     width: 100%;
 }
 
 .rec3 {
-    background-color: rgba(34, 68, 34, 0.568);
+    background-color: rgba(214, 19, 19, 0.637);
     max-width: 400px;
     width: 100%;
 }
 
 .rec4 {
-    background-color: rgba(34, 34, 85, 0.589);
+    background-color:rgba(2, 5, 170, 0.467);
     max-width: 400px;
     width: 100%;
 }
 
 .rec5 {
-    background-color: rgba(136, 85, 51, 0.637);
+    background-color: rgba(214, 19, 19, 0.637);
     max-width: 400px;
     width: 100%;
 }
 
 .rec6 {
-    background-color: #6735;
+    background-color:rgba(2, 5, 170, 0.467);
     max-width: 400px;
     width: 100%;
 }
@@ -122,13 +183,11 @@
 
 }
 
-/* Fråga - Varför kopplas in denna? när man kollar inspection tools ser man media.q på det ovan, men inte här..så gissar det är något med "kopplingen" som gör
-att jag inte kan skriva? För det ska gå att göra columm haha.*/ 
 
 @media screen and (min-width: 0px) and (max-width: 807px) {
 
     .all__portfolio {
-        height: 1100px;
+        height: 1300px;
     }
     .cards__port-container{
         flex-direction: column;

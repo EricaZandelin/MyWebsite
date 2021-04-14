@@ -2,47 +2,114 @@
 body{
   font-size: 16px;
   text-align: center;
-  font-family: 'Fredoka One', cursive;
-  background-color: black;
-}
-
-.background__image {
-  background-image: url(../images/frontbild.jpg);
-  height: auto; 
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; 
-  background-attachment: fixed;
-  overflow-x: hidden;
+  font-family: 'Roboto', sans-serif;
+  background-color: #000;
 }
 
 .all__index {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
+  align-items: center;
   height: 830px;
 }
 
-.landing__container {
+.index__container {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  position: fixed;
+  color: #f1f1f1;
+  width: 50%;
 }
 
-.landing__text  {
+.index__text {
+  width: 50%;
+  font-size: 50px;
   color:#fff;
   text-transform: uppercase;
+  text-shadow: 1px 1px #fff, 2px 2px #000, 3px 3px #fff, 4px 4px #000, 0.125rem 0.125rem #fff;
 }
 
 
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+/* Screen sizes*/ 
 
-@media screen and (min-width: 375px) and (max-width: 1300px) {
+@media screen and (min-width: 800px) and (max-width: 1050px) {
   .all__index {
-    height: 850px;
+    height: 1200px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #myVideo{
+    width: 80%;
+    height: 80%;
+  }
+
+  .index__container {
+    width: 100%;
+  }
+
+}
+
+@media screen and (min-width: 760px) and (max-width: 799px) {
+  .all__index {
+    height: 800px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #myVideo{
+    width: 80%;
+    height: 80%;
+  }
+
+  .index__container {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 375px) and (max-width: 759px) {
+  .all__index {
+    height: 600px;
+  }
+
+  #myVideo{
+    width: 80%;
+    height: 80%;
+  }
+
+  .index__container {
+    width: 100%;
+  }
+
+  .index__text {
+    font-size: 30px;
   }
 }
 
 @media screen and (min-width: 0px) and (max-width: 374px) {
   .all__index {
-    height: 400px;
+    height: 480px;
+  }
+
+  .index__container {
+    width: 100%;
+  }
+
+  #myVideo{
+    width: 80%;
+    height: 80%;
+  }
+
+  .index__text {
+    font-size: 20px;
   }
 }
