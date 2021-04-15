@@ -4,7 +4,7 @@
     height: auto; 
     background-position: center; 
     background-repeat: no-repeat; 
-    background-size: cover; 
+    background-size:contain;
     background-attachment: fixed;
     overflow-x: hidden;
 }
@@ -141,37 +141,37 @@
 }
 
 .rec1 {
-    background-color: rgba(214, 19, 19, 0.637);
+    background-color:#927619;
     max-width: 400px;
     width: 100%;
 }
 
 .rec2 {
-    background-color:rgba(2, 5, 170, 0.467);
+    background-color:#c1ad6d;
     max-width: 400px;
     width: 100%;
 }
 
 .rec3 {
-    background-color: rgba(214, 19, 19, 0.637);
+    background-color:#927619;
     max-width: 400px;
     width: 100%;
 }
 
 .rec4 {
-    background-color:rgba(2, 5, 170, 0.467);
+    background-color: #c1ad6d;
     max-width: 400px;
     width: 100%;
 }
 
 .rec5 {
-    background-color: rgba(214, 19, 19, 0.637);
+    background-color:#927619;
     max-width: 400px;
     width: 100%;
 }
 
 .rec6 {
-    background-color:rgba(2, 5, 170, 0.467);
+    background-color:#c1ad6d;
     max-width: 400px;
     width: 100%;
 }
