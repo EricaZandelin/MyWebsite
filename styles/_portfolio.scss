@@ -1,4 +1,4 @@
-
+/*
 .background__image4{
     background-image: url(../images/EZ_mindre.png);
     height: auto; 
@@ -8,13 +8,13 @@
     background-attachment: fixed;
     overflow-x: hidden;
 }
-
-
+*/
+  
 .all__portfolio {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    height: 1400px;
+    height: 2300px;
 }
 
 .cards__port-container {
@@ -22,13 +22,13 @@
     justify-content: space-evenly;
     flex-direction: column;
     align-items: center;
-    height: 1200px;
+    height: 2100px;
 }
-
 
 
 .head__port-text {
     font-size: 50px;
+    color:#c1ad6d;
 }
 
 .card1 {
@@ -86,9 +86,9 @@
 .container {
     position: relative;
     width: 50%;
-  }
+}
   
-  .image {
+.image {
     opacity: 1;
     display: block;
     max-width: 400px;
@@ -97,9 +97,9 @@
     height: auto;
     transition: .5s ease;
     backface-visibility: hidden;
-  }
+}
   
-  .middle {
+.middle {
     transition: .5s ease;
     opacity: 0;
     position: absolute;
@@ -108,22 +108,22 @@
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     text-align: center;
-  }
+}
   
-  .container:hover .image {
+.container:hover .image {
     opacity: 0.3;
-  }
+}
   
-  .container:hover .middle {
+.container:hover .middle {
     opacity: 1;
-  }
+}
   
-  .text {
+.text {
     background-color: #4CAF50;
     color: white;
     font-size: 16px;
     padding: 16px 32px;
-  }
+}
 
 .fa-github {
     color:#fff;
@@ -176,25 +176,130 @@
     width: 100%;
 }
 
-@media screen and (min-width: 807px) and (max-width: 1039px) {
-    .card1, .card2 {
-        width:400px ;
-    }
-
+.rec7 {
+    background-color:#927619;
+    max-width: 400px;
+    width: 100%;
 }
 
+/* Skills box */
 
-@media screen and (min-width: 0px) and (max-width: 807px) {
-
-    .all__portfolio {
-        height: 1300px;
-    }
-    .cards__port-container{
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .card1 {
-        margin-bottom: 10px;
-    }
+.skills__head-text {
+    font-size: 50px;
 }
+
+.skills {
+    color:#c1ad6d;
+}
+
+.progress {
+    background: rgba(255,255,255,0.1);
+    justify-content: flex-start;
+    border-radius: 100px;
+    align-items: center;
+    position: relative;
+    padding: 0 5px;
+    display: flex;
+    height: 40px;
+    max-width: 500px;
+    width: 100%;
+}
+  
+.progress-value {
+    animation: load 3s normal forwards;
+    box-shadow: 0 10px 40px -10px #fff;
+    border-radius: 100px;
+    background: #fff;
+    height: 30px;
+    width: 0;
+}
+
+.progress-value2 {
+    animation: load2 3s normal forwards;
+    box-shadow: 0 10px 40px -10px #fff;
+    border-radius: 100px;
+    background: #fff;
+    height: 30px;
+    width: 0;
+}
+
+.progress-value3 {
+    animation: load3 3s normal forwards;
+    box-shadow: 0 10px 40px -10px #fff;
+    border-radius: 100px;
+    background: #fff;
+    height: 30px;
+    width: 0;
+}
+
+.progress-value4 {
+    animation: load4 3s normal forwards;
+    box-shadow: 0 10px 40px -10px #fff;
+    border-radius: 100px;
+    background: #fff;
+    height: 30px;
+    width: 0;
+}
+
+.progress-value5 {
+    animation: load5 3s normal forwards;
+    box-shadow: 0 10px 40px -10px #fff;
+    border-radius: 100px;
+    background: #fff;
+    height: 30px;
+    width: 0;
+}
+
+.progress-value6 {
+    animation: load6 3s normal forwards;
+    box-shadow: 0 10px 40px -10px #fff;
+    border-radius: 100px;
+    background: #fff;
+    height: 30px;
+    width: 0;
+}
+
+.progress-value7 {
+    animation: load7 3s normal forwards;
+    box-shadow: 0 10px 40px -10px #fff;
+    border-radius: 100px;
+    background: #fff;
+    height: 30px;
+    width: 0;
+}
+  
+  @keyframes load {
+    0% { width: 0; }
+    100% { width: 88%; }
+  }
+
+  @keyframes load2 {
+    0% { width: 0; }
+    100% { width: 84%; }
+  }
+
+  @keyframes load3 {
+    0% { width: 0; }
+    100% { width: 30%; }
+  }
+
+  @keyframes load4 {
+    0% { width: 0; }
+    100% { width: 70%; }
+  }
+
+  @keyframes load5 {
+    0% { width: 0; }
+    100% { width: 80%; }
+  }
+
+  @keyframes load6 {
+    0% { width: 0; }
+    100% { width: 70%; }
+  }
+
+  @keyframes load7 {
+    0% { width: 0; }
+    100% { width: 100%; }
+  }
+

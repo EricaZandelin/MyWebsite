@@ -126,3 +126,5 @@ setInterval(loop, 1000 / 60);
 
 
 
+/* Portfolio spinn */ 
+

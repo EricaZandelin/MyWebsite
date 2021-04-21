@@ -23,6 +23,17 @@ body {
   background-color: #000;
 }
 
+/*navbar*/
+.d-flex {
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+/*Ends nav*/
 .all__index {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -63,15 +74,45 @@ body {
   text-shadow: 1px 1px #fff, 2px 2px #000, 3px 3px #fff, 4px 4px #000, 0.125rem 0.125rem #fff;
 }
 
+/*
 #myVideo {
   position: fixed;
-  right: 0;
-  bottom: 0;
   min-width: 100%;
   min-height: 100%;
+  right: 0;
+  bottom: 0;
+} */
+#myVideo {
+  position: fixed;
+  z-index: -1;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+@media (min-aspect-ratio: 16 / 9) {
+  #myVideo {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-aspect-ratio: 16 / 9) {
+  #myVideo {
+    width: auto;
+    height: 100%;
+  }
 }
 
 /* Screen sizes*/
+@media screen and (min-width: 800px) and (max-width: 1480px) {
+  #myVideo {
+    width: 1480;
+    height: auto;
+  }
+}
+
 @media screen and (min-width: 800px) and (max-width: 1050px) {
   .all__index {
     height: 1200px;
@@ -83,11 +124,14 @@ body {
             align-items: center;
   }
   #myVideo {
-    width: 80%;
-    height: 80%;
+    width: 100%;
+    height: 100%;
   }
   .index__container {
     width: 100%;
+  }
+  .index__text {
+    font-size: 55px;
   }
 }
 
@@ -102,8 +146,8 @@ body {
             align-items: center;
   }
   #myVideo {
-    width: 80%;
-    height: 80%;
+    width: 100%;
+    height: 100%;
   }
   .index__container {
     width: 100%;
@@ -115,14 +159,14 @@ body {
     height: 600px;
   }
   #myVideo {
-    width: 80%;
-    height: 80%;
+    width: 100%;
+    height: 100%;
   }
   .index__container {
     width: 100%;
   }
   .index__text {
-    font-size: 30px;
+    font-size: 40px;
   }
 }
 
@@ -134,11 +178,11 @@ body {
     width: 100%;
   }
   #myVideo {
-    width: 80%;
-    height: 80%;
+    width: 100%;
+    height: 100%;
   }
   .index__text {
-    font-size: 20px;
+    font-size: 30px;
   }
 }
 
@@ -743,16 +787,17 @@ h4 {
   }
 }
 
-.background__image4 {
-  background-image: url(../images/EZ_mindre.png);
-  height: auto;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-attachment: fixed;
-  overflow-x: hidden;
+/*
+.background__image4{
+    background-image: url(../images/EZ_mindre.png);
+    height: auto; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size:contain;
+    background-attachment: fixed;
+    overflow-x: hidden;
 }
-
+*/
 .all__portfolio {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -763,7 +808,7 @@ h4 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 1400px;
+  height: 2300px;
 }
 
 .cards__port-container {
@@ -780,11 +825,12 @@ h4 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 1200px;
+  height: 2100px;
 }
 
 .head__port-text {
   font-size: 50px;
+  color: #c1ad6d;
 }
 
 .card1 {
@@ -952,27 +998,240 @@ h4 {
   width: 100%;
 }
 
-@media screen and (min-width: 807px) and (max-width: 1039px) {
-  .card1, .card2 {
-    width: 400px;
+.rec7 {
+  background-color: #927619;
+  max-width: 400px;
+  width: 100%;
+}
+
+/* Skills box */
+.skills__head-text {
+  font-size: 50px;
+}
+
+.skills {
+  color: #c1ad6d;
+}
+
+.progress {
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  border-radius: 100px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  padding: 0 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 40px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.progress-value {
+  -webkit-animation: load 3s normal forwards;
+          animation: load 3s normal forwards;
+  -webkit-box-shadow: 0 10px 40px -10px #fff;
+          box-shadow: 0 10px 40px -10px #fff;
+  border-radius: 100px;
+  background: #fff;
+  height: 30px;
+  width: 0;
+}
+
+.progress-value2 {
+  -webkit-animation: load2 3s normal forwards;
+          animation: load2 3s normal forwards;
+  -webkit-box-shadow: 0 10px 40px -10px #fff;
+          box-shadow: 0 10px 40px -10px #fff;
+  border-radius: 100px;
+  background: #fff;
+  height: 30px;
+  width: 0;
+}
+
+.progress-value3 {
+  -webkit-animation: load3 3s normal forwards;
+          animation: load3 3s normal forwards;
+  -webkit-box-shadow: 0 10px 40px -10px #fff;
+          box-shadow: 0 10px 40px -10px #fff;
+  border-radius: 100px;
+  background: #fff;
+  height: 30px;
+  width: 0;
+}
+
+.progress-value4 {
+  -webkit-animation: load4 3s normal forwards;
+          animation: load4 3s normal forwards;
+  -webkit-box-shadow: 0 10px 40px -10px #fff;
+          box-shadow: 0 10px 40px -10px #fff;
+  border-radius: 100px;
+  background: #fff;
+  height: 30px;
+  width: 0;
+}
+
+.progress-value5 {
+  -webkit-animation: load5 3s normal forwards;
+          animation: load5 3s normal forwards;
+  -webkit-box-shadow: 0 10px 40px -10px #fff;
+          box-shadow: 0 10px 40px -10px #fff;
+  border-radius: 100px;
+  background: #fff;
+  height: 30px;
+  width: 0;
+}
+
+.progress-value6 {
+  -webkit-animation: load6 3s normal forwards;
+          animation: load6 3s normal forwards;
+  -webkit-box-shadow: 0 10px 40px -10px #fff;
+          box-shadow: 0 10px 40px -10px #fff;
+  border-radius: 100px;
+  background: #fff;
+  height: 30px;
+  width: 0;
+}
+
+.progress-value7 {
+  -webkit-animation: load7 3s normal forwards;
+          animation: load7 3s normal forwards;
+  -webkit-box-shadow: 0 10px 40px -10px #fff;
+          box-shadow: 0 10px 40px -10px #fff;
+  border-radius: 100px;
+  background: #fff;
+  height: 30px;
+  width: 0;
+}
+
+@-webkit-keyframes load {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 88%;
   }
 }
 
-@media screen and (min-width: 0px) and (max-width: 807px) {
-  .all__portfolio {
-    height: 1300px;
+@keyframes load {
+  0% {
+    width: 0;
   }
-  .cards__port-container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+  100% {
+    width: 88%;
   }
-  .card1 {
-    margin-bottom: 10px;
+}
+
+@-webkit-keyframes load2 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 84%;
+  }
+}
+
+@keyframes load2 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 84%;
+  }
+}
+
+@-webkit-keyframes load3 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 30%;
+  }
+}
+
+@keyframes load3 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 30%;
+  }
+}
+
+@-webkit-keyframes load4 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 70%;
+  }
+}
+
+@keyframes load4 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 70%;
+  }
+}
+
+@-webkit-keyframes load5 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 80%;
+  }
+}
+
+@keyframes load5 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 80%;
+  }
+}
+
+@-webkit-keyframes load6 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 70%;
+  }
+}
+
+@keyframes load6 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 70%;
+  }
+}
+
+@-webkit-keyframes load7 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes load7 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
   }
 }
 
