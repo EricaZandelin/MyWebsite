@@ -1,3 +1,29 @@
+
+/* DOWN BELOW IS HEADER - Massive thanks to John Smilga on freeCodeCamp */
+
+
+const toggleBtn = document.querySelector(".sidebar-toggle");
+const closeBtn = document.querySelector(".close-btn");
+const sidebar = document.querySelector(".sidebar");
+
+toggleBtn.addEventListener("click", function() {
+    console.log(sidebar.classList);
+    /*if(sidebar.classList.contains("show-sidebar")) {
+        sidebar.classList.remove('show-sidebar');
+    }
+    else {
+        sidebar.classList.add("show-sidebar");
+    }*/
+    sidebar.classList.toggle('show-sidebar');
+});
+
+closeBtn.addEventListener('click', function() {
+    sidebar.classList.remove('show-sidebar');
+})
+
+
+
+/*
 var animateButton = function(e) {
 
     e.preventDefault;
@@ -14,7 +40,7 @@ var animateButton = function(e) {
   
   for (var i = 0; i < bubblyButtons.length; i++) {
     bubblyButtons[i].addEventListener('click', animateButton, false);
-  }
+  }*/
 
 
 
@@ -127,4 +153,7 @@ setInterval(loop, 1000 / 60);
 
 
 /* Portfolio spinn */ 
+
+
+
 

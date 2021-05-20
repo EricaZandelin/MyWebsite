@@ -267,20 +267,29 @@
     height: 30px;
     width: 0;
 }
+
+.progress-value8 {
+    animation: load8 3s normal forwards;
+    box-shadow: 0 10px 40px -10px #fff;
+    border-radius: 100px;
+    background: #fff;
+    height: 30px;
+    width: 0;
+}
   
   @keyframes load {
     0% { width: 0; }
-    100% { width: 88%; }
+    100% { width: 95%; }
   }
 
   @keyframes load2 {
     0% { width: 0; }
-    100% { width: 84%; }
+    100% { width: 95%; }
   }
 
   @keyframes load3 {
     0% { width: 0; }
-    100% { width: 30%; }
+    100% { width: 40%; }
   }
 
   @keyframes load4 {
@@ -301,5 +310,10 @@
   @keyframes load7 {
     0% { width: 0; }
     100% { width: 100%; }
+  }
+
+  @keyframes load8 {
+    0% { width: 0; }
+    100% { width: 30%; }
   }
 
