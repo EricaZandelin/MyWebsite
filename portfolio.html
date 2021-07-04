@@ -7,6 +7,8 @@
     <meta name="EricaZandelin" content="My Career">
     <meta name="description" content="Junior Webdeveloper portfolio">
     <meta name="keywords" content="HTML, CSS, JavaScript">
+    <link rel="stylesheet" href="./OwlCarousel2-2.3.4/dist/assets/owl.carousel.css">
+    <link rel="stylesheet" href="./OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
     <link rel="icon" type="image/png" href="../images/favicon-16x16.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
     rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
@@ -19,7 +21,6 @@
     <title>EricaZandelin | Portfolio</title>
 </head>
 <body>
-  <div class="background__image4">
 
     <button class="sidebar-toggle">
       <i class="fas fa-bars"></i>
@@ -90,8 +91,84 @@
           </div>
           </div>
 
+
+         <div class="card3">
+           <div class="container-carousel">
+             <h2>Sportify WF {school project}</h2>
+             <p>As the ending project of the IT-programming course, me and my classmate Oa Blom created an e-commerce website for protein powder.
+                Here below is our wireframe that we did for it <i class="far fa-smile-beam"></i>.
+             </p>
+          <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="/images/WF1.png" class="wf-pic" alt="wireframe">
+              </div>
+              <div class="carousel-item">
+                <img src="/images/WF2.png" class="wf-pic" alt="wireframe">
+              </div>
+              <div class="carousel-item">
+                <img src="/images/WF3.png" class="wf-pic" alt="wireframe">
+              </div>
+              <div class="carousel-item">
+                <img src="/images/WF4.png" class="wf-pic2" alt="wireframe">
+              </div>
+              <div class="carousel-item">
+                <img src="/images/WF5.png" class="wf-pic" alt="wireframe">
+              </div>
+            </div>
+
+  
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+         </div>
+         </div>        
+          
+    
+
+          <h2 class="tm-text">Testimonials</h2>
+
+          <div class="slider">
+            <input type="radio" name="slider" title="slide1" checked="checked" class="slider__nav"/>
+            <input type="radio" name="slider" title="slide2" class="slider__nav"/>
+            <input type="radio" name="slider" title="slide3" class="slider__nav"/>
+            <input type="radio" name="slider" title="slide4" class="slider__nav"/>
+            <div class="slider__inner">
+              <div class="slider__contents"><img src="/images/michelleAndersson2.jpg" class="tm-pic1">
+                <h2 class="slider__caption">Michelle Andersson</h2>
+                <p class="slider__txt">"Erica was one of my students in IT Programming at Sundsgården Folkhögskola 2021. During the course Erica showed great determination, dedication, and willingness to learn. Her skills in front-end development quickly improved with each project and by the end of the course she was creating complex, well-functioning, beautiful, and clean websites. Erica always had great questions that showed that she was determined to not only learn but to also understand why and she often went out to find more information on her own to deepen her understanding of the subjects.
+                  Erica was an absolute joy to teach, and I would not hesitate if the opportunity to work with her in the future were to arise." - IT Programming course coordinator and educator + front-end developer
+                  </p>
+              </div>
+              <div class="slider__contents"><img src="/images/sofie.jpg" class="tm-pic2">
+                <h2 class="slider__caption">Sofie Gunnarsson</h2>
+                <p class="slider__txt">"Erica has worked backstage at the Latitude 57 festival for the past couple of years. Her responsibility has been to coordinate the needs of artists while at the festival, with all that entails. She is a quick learner, who is easy to deal with and a pleasure to have in the team. 
+                  Erica also has experience from within the branch, which makes it easy to navigate the needs of the artists, the crew and the volunteers."-
+                  Backstage Manager + Founder & Partner of Latitud 57
+                  </p>
+              </div>
+              <div class="slider__contents"><img src="/images/pat.png" class="tm-pic3">
+                <h2 class="slider__caption">Patrick Svensson</h2>
+                <p class="slider__txt">“ Thank you for terrific teamwork! It was great fun to be on the same team as you. You have the ability to pitch fabulous ideas as well as being positive and encouraging to other team member’s suggestions. 
+                  I do hope we get to work together again sometime in the future. “ -  Student IT-programming </p>
+              </div>
+              <div class="slider__contents">
+                <h2 class="slider__caption">You?</h2><img src="/images/dog-3071334_640.jpg" class="tm-pic4">
+                <p class="slider__txt">Will you be the next one to write here? <i class="fas fa-smile-wink"></i></p>
+              </div>
+            </div>
+          </div>
+
+             
+     
         <div class="skills__head-text">
-            <h1 class="skills">Skills</h1>
+            <h2 class="skills">Skills</h2>
           </div>
           
           <h2>HTML</h2>
@@ -104,14 +181,19 @@
             <div class="progress-value2"></div>
           </div>
 
-          <h2>Javascript (currently studying)</h2>
+          <h2>Javascript (currently learning)</h2>
           <div class="progress">
             <div class="progress-value3"></div>
           </div>
 
-          <h2>React.js (currently studying)</h2>
+          <h2>React.js (currently learning)</h2>
           <div class="progress">
             <div class="progress-value8"></div>
+          </div>
+
+          <h2>PHP (currently learning)</h2>
+          <div class="progress">
+            <div class="progress-value9"></div>
           </div>
 
           <h2>Git</h2>
@@ -141,9 +223,9 @@
     </section>
 
 
-
     <script src="script/logic.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-  </div>
+
+  
 </body>
 </html>

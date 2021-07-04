@@ -14,7 +14,7 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    height: 2300px;
+    height: 3800px;
 }
 
 .cards__port-container {
@@ -22,12 +22,12 @@
     justify-content: space-evenly;
     flex-direction: column;
     align-items: center;
-    height: 2100px;
+    height: 3700px;
 }
 
 
 .head__port-text {
-    font-size: 50px;
+    font-size: 40px;
     color:#c1ad6d;
 }
 
@@ -40,23 +40,35 @@
     height: 300px;
     background-color: #000;
     color:#fff;
-    opacity: 0.7;
     overflow: hidden;
-    border-style: solid;
+    border: solid white 3px;
+    box-shadow: 0 0 10px #9ecaed;
+    border-radius: 5px;
 }
 
 .card2 {
     display: flex;
     align-items: center;
     max-width: 800px;
-    width: 100%;
+    /*width: 100%;*/
     height: 500px;
     background-color: #000;
     color:#fff;
-    opacity: 0.7;
     overflow: hidden;
-    border-style: solid;
+    border: solid white 3px;
+    box-shadow: 0 0 10px #9ecaed;
+    border-radius: 5px;
 }
+
+
+.card3 {
+  border: solid white 3px;
+  max-width: 800px;
+  height: 900px;
+  box-shadow: 0 0 10px #9ecaed;
+  border-radius: 5px;
+}
+
 
 .text-portfolio {
     color:#fff;
@@ -184,12 +196,11 @@
 
 /* Skills box */
 
-.skills__head-text {
-    font-size: 50px;
-}
+
 
 .skills {
     color:#c1ad6d;
+    font-size: 45px;
 }
 
 .progress {
@@ -203,6 +214,7 @@
     height: 40px;
     max-width: 500px;
     width: 100%;
+    box-shadow: 0 0 10px #9ecaed;
 }
   
 .progress-value {
@@ -276,6 +288,15 @@
     height: 30px;
     width: 0;
 }
+
+.progress-value9 {
+    animation: load9 3s normal forwards;
+    box-shadow: 0 10px 40px -10px #fff;
+    border-radius: 100px;
+    background: #fff;
+    height: 30px;
+    width: 0;
+}
   
   @keyframes load {
     0% { width: 0; }
@@ -317,3 +338,219 @@
     100% { width: 30%; }
   }
 
+  @keyframes load9 {
+    0% { width: 0; }
+    100% { width: 20%; }
+  }
+
+
+/* CAROUSEL PART */
+
+/* Big thanks to Mahesh Ambure on Codepen */
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
+
+
+.slider {
+  width: 800px;
+  min-height: 600px;
+  position: relative;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.slider__nav {
+  width: 12px;
+  height: 12px;
+  margin: 2rem 12px;
+  border-radius: 50%;
+  z-index: 10;
+  outline: 6px solid #ccc;
+  outline-offset: -6px;
+  box-shadow: 0 0 0 0 #333, 0 0 0 0 rgba(51, 51, 51, 0);
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+          
+}
+.slider__nav:checked {
+  -webkit-animation: check 0.4s linear forwards;
+          animation: check 0.4s linear forwards;
+}
+.slider__nav:checked:nth-of-type(1) ~ .slider__inner {
+  left: 0%;
+}
+.slider__nav:checked:nth-of-type(2) ~ .slider__inner {
+  left: -100%;
+}
+.slider__nav:checked:nth-of-type(3) ~ .slider__inner {
+  left: -200%;
+}
+.slider__nav:checked:nth-of-type(4) ~ .slider__inner {
+  left: -300%;
+}
+.slider__inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 400%;
+  height: 100%;
+  -webkit-transition: left 0.4s;
+  transition: left 0.4s;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+}
+.slider__contents {
+  height: 100%;
+  padding: 2rem;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-flex-flow: column nowrap;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.slider__image {
+  font-size: 2.7rem;
+      color: #2196F3;
+}
+.slider__caption {
+  font-weight: 500;
+  margin: 2rem 0 1rem;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+}
+.slider__txt {
+  color:#fff;
+  margin-bottom: 3rem;
+  max-width: 500px;
+}
+
+@-webkit-keyframes check {
+  50% {
+    outline-color: #333;
+    box-shadow: 0 0 0 12px #333, 0 0 0 36px rgba(51, 51, 51, 0.2);
+  }
+  100% {
+    outline-color: #333;
+    box-shadow: 0 0 0 0 #333, 0 0 0 0 rgba(51, 51, 51, 0);
+  }
+}
+
+@keyframes check {
+  50% {
+    outline-color: #333;
+    box-shadow: 0 0 0 12px #333, 0 0 0 36px rgba(51, 51, 51, 0.2);
+  }
+  100% {
+    outline-color: #333;
+    box-shadow: 0 0 0 0 #333, 0 0 0 0 rgba(51, 51, 51, 0);
+  }
+}
+
+
+.tm-pic1, .tm-pic2, .tm-pic3, .tm-pic4 {
+    max-width: 80px;
+    width: 100%;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.tm-text {
+    color:#c1ad6d;
+    font-size: 45px;
+    margin-top: 10px;
+}
+
+
+/* IMAGE SLIDER */ 
+
+.wf-pic {
+ max-width: 510;
+  width: 100%;
+  height: 700px;
+}
+
+.wf-pic2 {
+  max-width: 710px;
+  width: 100%;
+  height: 500px;
+}
+
+
+.carousel {
+  width:540px;
+  height:700px;
+  z-index: -1;
+}
+
+.container-carousel {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color:#fff;
+  margin-top: 20px;
+}
+
+.carousel-inner {
+  height: calc(100vh - 50px); /* full screen */
+}
+.carousel-inner > .item > img {
+  width: 100%; /* to make smaller images look full */
+}
+
+
+.carousel-control-next-icon, .carousel-control-prev-icon  {
+background-color: #0EC2A1;
+border-radius: 5px;
+}
+
+
+.carousel-control-prev, .carousel-control-next {
+  margin: -75px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 769px) {
+
+.card3 {
+  max-width: 700px;
+}
+
+}

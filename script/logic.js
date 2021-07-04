@@ -59,6 +59,7 @@ var animateButton = function(e) {
   h = (canvas.height = window.innerHeight);
 //initiation
 
+
 class firefly{
   constructor(){
     this.x = Math.random()*w;
@@ -156,4 +157,10 @@ setInterval(loop, 1000 / 60);
 
 
 
+/* IMAGE SLIDER */
 
+var myCarousel = document.querySelector('#myCarousel')
+var carousel = new bootstrap.Carousel(myCarousel, {
+  interval: 2000,
+  wrap: false
+})
